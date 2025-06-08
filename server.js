@@ -12,7 +12,7 @@ const SECRET_KEY = '1ed421a0da50ccaa8678ef339eef5b759fcb5da2b155c82d120789c7c84a
 // Login route
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
-    if (username === 'admin' && password === '123456') {
+    if (username === 'test' && password === 'test@123') {
         const token = jwt.sign({ user: username }, SECRET_KEY, { expiresIn: '1h' });
         res.json({ token });
     } else {
